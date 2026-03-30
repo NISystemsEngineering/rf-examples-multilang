@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <RootNamespace>CSharpRfGenAndAnal.Core</RootNamespace>
+    <AssemblyName>CSharpRfGenAndAnal.Core</AssemblyName>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Drawing" />
+    <Reference Include="NationalInstruments.Common">
+      <HintPath>C:\Program Files\National Instruments\TestStand 2023\Components\StepTypes\NI_MeasurementPlugIn\NationalInstruments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.ModularInstruments.Common">
+      <HintPath>C:\Program Files\National Instruments\InstrumentStudio\NationalInstruments.ModularInstruments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.ModularInstruments.ModularInstrumentsSystem">
+      <HintPath>C:\Program Files\National Instruments\InstrumentStudio\Addons\NI\STS RF Switch Control Panel\NationalInstruments.ModularInstruments.ModularInstrumentsSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.ModularInstruments.NIRfsg.Fx45">
+      <HintPath>C:\Program Files\National Instruments\InstrumentStudio\Addons\NI\STS RF Switch Control Panel\NationalInstruments.ModularInstruments.NIRfsg.Fx45.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.RFmx.InstrMX.Fx40">
+      <HintPath>C:\Program Files (x86)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\Current\NationalInstruments.RFmx.InstrMX.Fx40.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.RFmx.WlanMX.Fx40">
+      <HintPath>C:\Program Files (x86)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\Current\NationalInstruments.RFmx.WlanMX.Fx40.dll</HintPath>
+    </Reference>
+    <Reference Include="NationalInstruments.RFmx.SpecAnMX.Fx40">
+      <HintPath>C:\Program Files (x86)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\Current\NationalInstruments.RFmx.SpecAnMX.Fx40.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

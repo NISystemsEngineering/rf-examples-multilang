@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\git\\CSharp RF Gen and Anal\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{05E69C4F-B111-462B-90B9-CFD78880FCDB}|src\\CSharpRfGenAndAnal.Console\\CSharpRfGenAndAnal.Console.csproj|c:\\git\\csharp rf gen and anal\\src\\csharprfgenandanal.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{05E69C4F-B111-462B-90B9-CFD78880FCDB}|src\\CSharpRfGenAndAnal.Console\\CSharpRfGenAndAnal.Console.csproj|solutionrelative:src\\csharprfgenandanal.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\git\\CSharp RF Gen and Anal\\src\\CSharpRfGenAndAnal.Console\\Program.cs",
+              "RelativeDocumentMoniker": "src\\CSharpRfGenAndAnal.Console\\Program.cs",
+              "ToolTip": "C:\\git\\CSharp RF Gen and Anal\\src\\CSharpRfGenAndAnal.Console\\Program.cs",
+              "RelativeToolTip": "src\\CSharpRfGenAndAnal.Console\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-23T20:24:12.147Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

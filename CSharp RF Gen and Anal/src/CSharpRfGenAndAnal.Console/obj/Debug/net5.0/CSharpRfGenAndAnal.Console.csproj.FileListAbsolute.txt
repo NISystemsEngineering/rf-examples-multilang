@@ -1,0 +1,16 @@
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\CSharpRfGenAndAnal.Console.csproj.AssemblyReference.cache
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\CSharpRfGenAndAnal.Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\CSharpRfGenAndAnal.Console.AssemblyInfoInputs.cache
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\CSharpRfGenAndAnal.Console.AssemblyInfo.cs
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\CSharpRfGenAndAnal.Console.csproj.CoreCompileInputs.cache
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\bin\Debug\net5.0\CSharpRfGenAndAnal.Console.exe
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\bin\Debug\net5.0\CSharpRfGenAndAnal.Console.deps.json
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\bin\Debug\net5.0\CSharpRfGenAndAnal.Console.runtimeconfig.json
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\bin\Debug\net5.0\CSharpRfGenAndAnal.Console.runtimeconfig.dev.json
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\bin\Debug\net5.0\CSharpRfGenAndAnal.Console.dll
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\bin\Debug\net5.0\CSharpRfGenAndAnal.Console.pdb
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\CSharpRfGenAndAnal.Console.dll
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\ref\CSharpRfGenAndAnal.Console.dll
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\CSharpRfGenAndAnal.Console.pdb
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\CSharpRfGenAndAnal.Console.genruntimeconfig.cache
+C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\obj\Debug\net5.0\refint\CSharpRfGenAndAnal.Console.dll

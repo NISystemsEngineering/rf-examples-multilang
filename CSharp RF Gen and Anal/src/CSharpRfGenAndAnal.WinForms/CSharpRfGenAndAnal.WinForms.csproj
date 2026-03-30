@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>CSharpRfGenAndAnal.WinForms</RootNamespace>
+    <AssemblyName>CSharpRfGenAndAnal.WinForms</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpRfGenAndAnal.Core\CSharpRfGenAndAnal.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NationalInstruments.Common">
+      <HintPath>C:\Program Files\National Instruments\TestStand 2023\Components\StepTypes\NI_MeasurementPlugIn\NationalInstruments.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+  </ItemGroup>
+
+</Project>

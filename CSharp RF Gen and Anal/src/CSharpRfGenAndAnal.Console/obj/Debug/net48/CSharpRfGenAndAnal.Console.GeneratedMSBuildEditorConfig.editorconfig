@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = CSharpRfGenAndAnal.Console
+build_property.ProjectDir = C:\git\CSharp RF Gen and Anal\src\CSharpRfGenAndAnal.Console\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
