@@ -19,7 +19,7 @@
 		<Item Name="Reset and Start Test.vi" Type="VI" URL="../Reset and Start Test.vi"/>
 	</Item>
 	<Item Name="SG" Type="Folder">
-		<Item Name="Configure SG.vi" Type="VI" URL="../Configure SG.vi"/>
+		<Item Name="Enable Arbitrary Waveform.vi" Type="VI" URL="../Enable Arbitrary Waveform.vi"/>
 		<Item Name="Send Packets.vi" Type="VI" URL="../Send Packets.vi"/>
 	</Item>
 	<Item Name="utlity" Type="Folder">
@@ -29,8 +29,13 @@
 	<Item Name="Ctls" Type="Folder">
 		<Item Name="TxRx.ctl" Type="VI" URL="../TxRx.ctl"/>
 		<Item Name="PacketType.ctl" Type="VI" URL="../PacketType.ctl"/>
+		<Item Name="Measurement.ctl" Type="VI" URL="../Measurement.ctl"/>
 	</Item>
 	<Item Name="Flash" Type="Folder">
 		<Item Name="Flash DTM Mode.vi" Type="VI" URL="../Flash DTM Mode.vi"/>
+	</Item>
+	<Item Name="SA" Type="Folder">
+		<Item Name="Configure SA.vi" Type="VI" URL="../Configure SA.vi"/>
+		<Item Name="Run Tx Measurement.vi" Type="VI" URL="../Run Tx Measurement.vi"/>
 	</Item>
 </Library>
