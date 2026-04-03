@@ -25,6 +25,7 @@
     <VI name="Nordic nRF52 DK DTM Test.lvlib:DTM Transmitter Test.vi">
       <Breakpoints>
         <NodeIndexes>
+          <Node index="3756" enabled="1"/>
         </NodeIndexes>
         <SignalIndexes>
         </SignalIndexes>
@@ -34,6 +35,7 @@
           <SignalUID value="414"/>
           <SignalUID value="1481"/>
           <SignalUID value="2512"/>
+          <SignalUID value="868"/>
         </Generic>
       </Probes>
     </VI>
