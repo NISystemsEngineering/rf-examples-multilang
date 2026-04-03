@@ -25,6 +25,7 @@
 	<Item Name="utlity" Type="Folder">
 		<Item Name="BLE Channel Number to Frequency.vi" Type="VI" URL="../BLE Channel Number to Frequency.vi"/>
 		<Item Name="Calculate Receiver Sensitivity Threshold.vi" Type="VI" URL="../Calculate Receiver Sensitivity Threshold.vi"/>
+		<Item Name="nRF52 DK Generate Packets.vi" Type="VI" URL="../nRF52 DK Generate Packets.vi"/>
 	</Item>
 	<Item Name="Ctls" Type="Folder">
 		<Item Name="TxRx.ctl" Type="VI" URL="../TxRx.ctl"/>

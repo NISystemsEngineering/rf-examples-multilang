@@ -1,6 +1,19 @@
 <Configuration>
   <Target name="My Computer">
     <EnableDebuggingForAllVIs>0</EnableDebuggingForAllVIs>
+    <VI name="Nordic nRF52 DK DTM Test.lvlib:Configure SA.vi">
+      <Breakpoints>
+        <NodeIndexes>
+        </NodeIndexes>
+        <SignalIndexes>
+        </SignalIndexes>
+      </Breakpoints>
+      <Probes>
+        <Generic>
+          <SignalUID value="416"/>
+        </Generic>
+      </Probes>
+    </VI>
     <VI name="Nordic nRF52 DK DTM Test.lvlib:DTM Receiver Test.vi">
       <Breakpoints>
         <NodeIndexes>
@@ -25,7 +38,6 @@
     <VI name="Nordic nRF52 DK DTM Test.lvlib:DTM Transmitter Test.vi">
       <Breakpoints>
         <NodeIndexes>
-          <Node index="3756" enabled="1"/>
         </NodeIndexes>
         <SignalIndexes>
         </SignalIndexes>
@@ -35,7 +47,7 @@
           <SignalUID value="414"/>
           <SignalUID value="1481"/>
           <SignalUID value="2512"/>
-          <SignalUID value="868"/>
+          <SignalUID value="2728"/>
         </Generic>
       </Probes>
     </VI>
