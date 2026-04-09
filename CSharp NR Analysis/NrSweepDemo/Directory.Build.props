@@ -1,0 +1,73 @@
+<Project>
+  <!--
+    NI often installs:
+      - Driver assemblies (RFmx, NIRfsg, …) under MeasurementStudioVS*\DotNET\Assemblies\Current (or …\4.0\AnyCPU).
+      - NationalInstruments.Common.dll under Measurement Studio\DotNET\v4.0\AnyCPU\NationalInstruments.Common <version>\
+    Override:
+      <NI_DriverAssemblies>…folder with NationalInstruments.RFmx.InstrMX.*.dll…</NI_DriverAssemblies>
+      <NI_CommonAssemblies>…folder with NationalInstruments.Common.dll…</NI_CommonAssemblies>
+  -->
+  <Import Project="$(MSBuildThisFileDirectory)Directory.Build.props.user" Condition="Exists('$(MSBuildThisFileDirectory)Directory.Build.props.user')" />
+
+  <PropertyGroup>
+    <NI_DriverAssemblies Condition="'$(NI_DriverAssemblies)'==''">$(NI_DOTNET_DRIVER_ASSEMBLIES)</NI_DriverAssemblies>
+    <NI_CommonAssemblies Condition="'$(NI_CommonAssemblies)'==''">$(NI_DOTNET_COMMON_ASSEMBLIES)</NI_CommonAssemblies>
+    <!-- Legacy single-path override: treat as driver folder -->
+    <NI_DriverAssemblies Condition="'$(NI_DriverAssemblies)'=='' And '$(NI_DotNetAssemblies)'!=''">$(NI_DotNetAssemblies)</NI_DriverAssemblies>
+    <NI_DriverAssemblies Condition="'$(NI_DriverAssemblies)'==''">$(NI_DOTNET_ASSEMBLIES)</NI_DriverAssemblies>
+  </PropertyGroup>
+
+  <!-- Driver stack (RFmx Instr / NR / NIRfsg / Playback) -->
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'==''">
+    <NI_DriverAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\Current\NationalInstruments.RFmx.InstrMX.Fx40.dll')">$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\Current</NI_DriverAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'==''">
+    <NI_DriverAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\Current\NationalInstruments.RFmx.InstrMX.Fx45.dll')">$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\Current</NI_DriverAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'==''">
+    <NI_DriverAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2022\DotNET\4.0\AnyCPU\NationalInstruments.RFmx.InstrMX.Fx40.dll')">$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2022\DotNET\4.0\AnyCPU</NI_DriverAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'==''">
+    <NI_DriverAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2019\DotNET\4.0\AnyCPU\NationalInstruments.RFmx.InstrMX.Fx40.dll')">$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2019\DotNET\4.0\AnyCPU</NI_DriverAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'==''">
+    <NI_DriverAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2017\DotNET\4.0\AnyCPU\NationalInstruments.RFmx.InstrMX.Fx40.dll')">$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2017\DotNET\4.0\AnyCPU</NI_DriverAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'==''">
+    <NI_DriverAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2022\DotNET\4.0\x64\NationalInstruments.RFmx.InstrMX.Fx40.dll')">$(MSBuildProgramFiles32)\National Instruments\MeasurementStudioVS2022\DotNET\4.0\x64</NI_DriverAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'==''">
+    <NI_DriverAssemblies Condition="Exists('$(ProgramW6432)\National Instruments\MeasurementStudioVS2022\DotNET\4.0\AnyCPU\NationalInstruments.RFmx.InstrMX.Fx40.dll')">$(ProgramW6432)\National Instruments\MeasurementStudioVS2022\DotNET\4.0\AnyCPU</NI_DriverAssemblies>
+  </PropertyGroup>
+
+  <!-- NationalInstruments.Common (often in a separate versioned subfolder) -->
+  <PropertyGroup Condition="'$(NI_CommonAssemblies)'=='' And '$(NI_DriverAssemblies)'!='' And Exists('$(NI_DriverAssemblies)\NationalInstruments.Common.dll')">
+    <NI_CommonAssemblies>$(NI_DriverAssemblies)</NI_CommonAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_CommonAssemblies)'==''">
+    <NI_CommonAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\v4.0\AnyCPU\NationalInstruments.Common 19.1.40\NationalInstruments.Common.dll')">$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\v4.0\AnyCPU\NationalInstruments.Common 19.1.40</NI_CommonAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_CommonAssemblies)'==''">
+    <NI_CommonAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\v4.0\AnyCPU\NationalInstruments.Common 19.0.40\NationalInstruments.Common.dll')">$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\v4.0\AnyCPU\NationalInstruments.Common 19.0.40</NI_CommonAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_CommonAssemblies)'==''">
+    <NI_CommonAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\v4.0\AnyCPU\NationalInstruments.Common 20.0.40\NationalInstruments.Common.dll')">$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\v4.0\AnyCPU\NationalInstruments.Common 20.0.40</NI_CommonAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_CommonAssemblies)'==''">
+    <NI_CommonAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\Assemblies\v4.0\NationalInstruments.Common.dll')">$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\Assemblies\v4.0</NI_CommonAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_CommonAssemblies)'==''">
+    <NI_CommonAssemblies Condition="Exists('$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\Assemblies\Current\NationalInstruments.Common.dll')">$(MSBuildProgramFiles32)\National Instruments\Measurement Studio\DotNET\Assemblies\Current</NI_CommonAssemblies>
+  </PropertyGroup>
+
+  <!-- Fx suffix from driver folder -->
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'!=''">
+    <NI_Fx Condition="Exists('$(NI_DriverAssemblies)\NationalInstruments.RFmx.InstrMX.Fx40.dll')">Fx40</NI_Fx>
+    <NI_Fx Condition="'$(NI_Fx)'=='' And Exists('$(NI_DriverAssemblies)\NationalInstruments.RFmx.InstrMX.Fx45.dll')">Fx45</NI_Fx>
+    <NI_Fx Condition="'$(NI_Fx)'=='' And Exists('$(NI_DriverAssemblies)\NationalInstruments.RFmx.InstrMX.Fx48.dll')">Fx48</NI_Fx>
+    <NI_Fx Condition="'$(NI_Fx)'==''">Fx40</NI_Fx>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(NI_DriverAssemblies)'==''">
+    <NI_Fx>Fx40</NI_Fx>
+  </PropertyGroup>
+</Project>

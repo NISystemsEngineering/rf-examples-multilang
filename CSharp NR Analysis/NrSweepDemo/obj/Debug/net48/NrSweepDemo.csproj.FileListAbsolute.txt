@@ -1,0 +1,6 @@
+c:\git\CSharp NR Analysis\NrSweepDemo\obj\Debug\net48\NrSweepDemo.csproj.AssemblyReference.cache
+c:\git\CSharp NR Analysis\NrSweepDemo\obj\Debug\net48\NrSweepDemo.GeneratedMSBuildEditorConfig.editorconfig
+c:\git\CSharp NR Analysis\NrSweepDemo\obj\Debug\net48\NrSweepDemo.AssemblyInfoInputs.cache
+c:\git\CSharp NR Analysis\NrSweepDemo\obj\Debug\net48\NrSweepDemo.AssemblyInfo.cs
+c:\git\CSharp NR Analysis\NrSweepDemo\obj\Debug\net48\NrSweepDemo.csproj.CoreCompileInputs.cache
+c:\git\CSharp NR Analysis\NrSweepDemo\obj\Debug\net48\NrSweepDemo.sourcelink.json

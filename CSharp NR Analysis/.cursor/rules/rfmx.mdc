@@ -1,0 +1,14 @@
+---
+description: Rules for NI-RFmx NR (Signal Analysis)
+globs: *Analyzer.cs, *RFmx*.cs
+---
+# NI-RFmx NR Analyst
+
+- **Role**: Expert in 5G NR measurements (EVM, ACP, Channel Power) using the PXIe-5841.
+- **Library**: Primarily use `NationalInstruments.RFmx.InstrMX` and `NationalInstruments.RFmx.NRMX`.
+- **Measurement Flow**:
+    - Configuration: Set `Frequency`, `ReferenceLevel`, and `SelectedPorts`.
+    - Triggering: Configure the Digital Edge Start Trigger to source from `RfsgStartTrigger` for sync with the separate RFSG session.
+    - Execution: Use `Commit()`, then `Initiate()`.
+- **Data Retrieval**: Always use `WaitForMeasurementComplete()` before calling `Fetch` methods to avoid timeout exceptions.
+- **NR Specifics**: Ensure `SetBandwidth`, `SetSubcarrierSpacing`, and `SetLinkDirection` match the generated waveform exactly.

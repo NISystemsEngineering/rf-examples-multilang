@@ -1,0 +1,96 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+
+    <OutputType>WinExe</OutputType>
+
+    <TargetFramework>net48</TargetFramework>
+
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <RootNamespace>NrSweepDemo</RootNamespace>
+
+    <AssemblyName>NrSweepDemo</AssemblyName>
+
+    <Nullable>disable</Nullable>
+
+    <LangVersion>latest</LangVersion>
+
+  </PropertyGroup>
+
+
+
+  <!-- NI paths: NI_CommonAssemblies + NI_DriverAssemblies from Directory.Build.props -->
+
+
+
+  <ItemGroup>
+
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+
+    <Reference Include="NationalInstruments.Common" Condition="'$(NI_CommonAssemblies)'!=''">
+
+      <HintPath>$(NI_CommonAssemblies)\NationalInstruments.Common.dll</HintPath>
+
+      <Private>false</Private>
+
+    </Reference>
+
+    <Reference Include="NationalInstruments.RFmx.InstrMX.$(NI_Fx)" Condition="'$(NI_DriverAssemblies)'!=''">
+
+      <HintPath>$(NI_DriverAssemblies)\NationalInstruments.RFmx.InstrMX.$(NI_Fx).dll</HintPath>
+
+      <Private>false</Private>
+
+    </Reference>
+
+    <Reference Include="NationalInstruments.RFmx.NRMX.$(NI_Fx)" Condition="'$(NI_DriverAssemblies)'!=''">
+
+      <HintPath>$(NI_DriverAssemblies)\NationalInstruments.RFmx.NRMX.$(NI_Fx).dll</HintPath>
+
+      <Private>false</Private>
+
+    </Reference>
+
+    <Reference Include="NationalInstruments.ModularInstruments.NIRfsg.$(NI_Fx)" Condition="'$(NI_DriverAssemblies)'!=''">
+
+      <HintPath>$(NI_DriverAssemblies)\NationalInstruments.ModularInstruments.NIRfsg.$(NI_Fx).dll</HintPath>
+
+      <Private>false</Private>
+
+    </Reference>
+
+    <Reference Include="NationalInstruments.ModularInstruments.NIRfsgPlayback.$(NI_Fx)" Condition="'$(NI_DriverAssemblies)'!=''">
+
+      <HintPath>$(NI_DriverAssemblies)\NationalInstruments.ModularInstruments.NIRfsgPlayback.$(NI_Fx).dll</HintPath>
+
+      <Private>false</Private>
+
+    </Reference>
+
+  </ItemGroup>
+
+
+
+  <Target Name="EnsureNiDotNetAssemblies" BeforeTargets="ResolveAssemblyReferences">
+
+    <Error Condition="'$(NI_DriverAssemblies)'==''"
+
+           Text="NI driver assemblies not found (NationalInstruments.RFmx.InstrMX.*.dll). Install RFmx / NI-RFSG .NET support, or set NI_DriverAssemblies in Directory.Build.props.user. Typical folder: …\National Instruments\MeasurementStudioVS2010\DotNET\Assemblies\Current" />
+
+    <Error Condition="'$(NI_CommonAssemblies)'==''"
+
+           Text="NationalInstruments.Common.dll not found. Install Measurement Studio common .NET assemblies, or set NI_CommonAssemblies to the folder that contains NationalInstruments.Common.dll (often …\Measurement Studio\DotNET\v4.0\AnyCPU\NationalInstruments.Common &lt;version&gt;)." />
+
+    <Error Condition="'$(NI_DriverAssemblies)'!='' And !Exists('$(NI_DriverAssemblies)\NationalInstruments.RFmx.InstrMX.$(NI_Fx).dll')"
+
+           Text="Expected RFmx Instr at $(NI_DriverAssemblies)\NationalInstruments.RFmx.InstrMX.$(NI_Fx).dll — check NI_Fx." />
+
+    <Error Condition="'$(NI_CommonAssemblies)'!='' And !Exists('$(NI_CommonAssemblies)\NationalInstruments.Common.dll')"
+
+           Text="Expected NationalInstruments.Common.dll under $(NI_CommonAssemblies)." />
+
+  </Target>
+
+</Project>
+

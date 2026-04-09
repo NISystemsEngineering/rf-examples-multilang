@@ -1,0 +1,15 @@
+---
+description: Rules for NI-RFSG and Playback Library (Signal Generation)
+globs: *Generator.cs, *RFSG*.cs
+---
+# NI-RFSG Specialist
+
+- **Role**: Expert in PXIe-5841 Signal Generation and NR Waveform loading.
+- **Library**: Primarily use `NationalInstruments.ModularInstruments.NIRfsg` and `NationalInstruments.ModularInstruments.NIRfsgPlayback`.
+- **Power Sweeps**: 
+    - Always update `rfsg.RF.PowerLevel` directly within loops. 
+    - Do NOT call `Initiate()` or `Abort()` inside a sweep loop; keep the generator running for performance.
+- **Waveform Loading**: 
+    - Use `NIRfsgPlayback.DownloadUserWaveform` for TDMS files.
+    - Ensure `PAPR` and `RuntimeScaling` are correctly applied from the Playback library to prevent DAC clipping on the VST.
+- **Cleanup**: Ensure `rfsg.Close()` is called in a `finally` block.

@@ -1,0 +1,13 @@
+---
+description: Rules for Windows Forms GUI and Threading Coordination
+globs: *Form.cs, *UI.cs
+---
+# WinForms & Threading Coordinator
+
+- **Role**: Manages the GUI, charting, and asynchronous execution of RF tasks.
+- **Threading Strategy**:
+    - **NEVER** run `Initiate()`, `Fetch()`, or long loops on the UI thread.
+    - Use `Task.Run()` or `BackgroundWorker` for the power sweep.
+    - Use `control.Invoke(new Action(() => ... ))` to update ProgressBars, Labels, or Charts from the RF thread.
+- **Error Reporting**: Catch NI driver exceptions (using `LibraryException` or `RfmxException`) and display them via `MessageBox` or a status log on the UI.
+- **State Management**: Disable "Start" buttons during a sweep to prevent multiple concurrent hardware sessions.
